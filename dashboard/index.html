@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Flows In You Tracker</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎫 River Flows In You Tracker</h1>
+
+        <div class="last-update">
+            Last Update:
+            <span id="updatedAt">-</span>
+        </div>
+    </header>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Seats</h3>
+            <h2 id="total">0</h2>
+        </div>
+
+        <div class="card sold">
+            <h3>Sold</h3>
+            <h2 id="sold">0</h2>
+        </div>
+
+        <div class="card hold">
+            <h3>Holding</h3>
+            <h2 id="holding">0</h2>
+        </div>
+
+        <div class="card available">
+            <h3>Available</h3>
+            <h2 id="available">0</h2>
+        </div>
+
+    </section>
+
+    <section class="progress-card">
+
+        <div class="progress-title">
+            Ticket Sold
+        </div>
+
+        <div class="progress">
+
+            <div
+                id="progress-bar"
+                class="progress-bar"
+                style="width:0%"
+            ></div>
+
+        </div>
+
+        <div class="progress-text">
+            <span id="soldPercent">0%</span>
+        </div>
+
+    </section>
+
+
+    <section class="chart-card">
+
+        <h2>Sold History</h2>
+
+        <canvas id="historyChart"></canvas>
+
+    </section>
+
+
+    <section class="category-card">
+
+        <h2>Ticket Categories</h2>
+
+        <div id="categories">
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

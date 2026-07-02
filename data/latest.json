@@ -1,0 +1,45 @@
+{
+  "updatedAt": "2026-07-02T03:47:32.688Z",
+  "total": 722,
+  "available": 675,
+  "holding": 0,
+  "sold": 47,
+  "categories": {
+    "CHILL": {
+      "total": 93,
+      "available": 89,
+      "holding": 0,
+      "sold": 4
+    },
+    "RIVER (Standard)": {
+      "total": 108,
+      "available": 100,
+      "holding": 0,
+      "sold": 8
+    },
+    "FLOW (Pre)": {
+      "total": 125,
+      "available": 123,
+      "holding": 0,
+      "sold": 2
+    },
+    "IN (VIP)": {
+      "total": 215,
+      "available": 214,
+      "holding": 0,
+      "sold": 1
+    },
+    "YOU (SVIP)": {
+      "total": 119,
+      "available": 104,
+      "holding": 0,
+      "sold": 15
+    },
+    "GIFT": {
+      "total": 62,
+      "available": 45,
+      "holding": 0,
+      "sold": 17
+    }
+  }
+}

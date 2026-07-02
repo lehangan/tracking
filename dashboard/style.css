@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.last-update {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(30, 41, 59, .8);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 25px;
+    transition: .25s;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+.card h3 {
+    color: #94a3b8;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 42px;
+}
+
+.sold h2 {
+    color: #ef4444;
+}
+
+.hold h2 {
+    color: #f59e0b;
+}
+
+.available h2 {
+    color: #22c55e;
+}
+
+/* ===========================
+   Progress
+=========================== */
+
+.progress-card {
+    background: rgba(30,41,59,.8);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.progress-title {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.progress {
+    width: 100%;
+    height: 22px;
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg,#3b82f6,#06b6d4);
+    transition: width .5s ease;
+}
+
+.progress-text {
+    margin-top: 12px;
+    text-align: right;
+    color: #94a3b8;
+}
+
+/* ===========================
+   Chart
+=========================== */
+
+.chart-card {
+    background: rgba(30,41,59,.8);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.chart-card h2 {
+    margin-bottom: 20px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+/* ===========================
+   Categories
+=========================== */
+
+.category-card {
+    background: rgba(30,41,59,.8);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.category-card h2 {
+    margin-bottom: 25px;
+}
+
+#categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+    gap: 20px;
+}
+
+.category-item {
+    background: #111827;
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.05);
+}
+
+.category-item h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.category-item p {
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.category-progress {
+    width: 100%;
+    height: 12px;
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.category-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg,#8b5cf6,#3b82f6);
+}
+
+.category-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    canvas {
+        height: 260px !important;
+    }
+
+}
