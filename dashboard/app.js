@@ -2,10 +2,10 @@ let chart = null;
 
 async function loadData() {
     try {
-        const latest = await fetch("../data/latest.json?_=" + Date.now())
+        const latest = await fetch("/tracking/data/latest.json?_=" + Date.now())
             .then(res => res.json());
 
-        const history = await fetch("../data/history.json?_=" + Date.now())
+        const history = await fetch("/tracking/data/history.json?_=" + Date.now())
             .then(res => res.json());
 
         updateSummary(latest);
