@@ -224,3 +224,19 @@ canvas {
     }
 
 }
+
+/* ===========================
+   Sold Delta (+X)
+=========================== */
+
+.delta {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #22c55e; /* xanh khi tăng */
+    display: inline-block;
+}
+
+.delta.negative {
+    color: #ef4444; /* đỏ khi giảm */
+}

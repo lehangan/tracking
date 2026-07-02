@@ -6,7 +6,6 @@
     <title>River Flows In You Tracker</title>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -54,38 +53,28 @@
         </div>
 
         <div class="progress">
-
-            <div
-                id="progress-bar"
-                class="progress-bar"
-                style="width:0%"
-            ></div>
-
+            <div id="progress-bar" class="progress-bar" style="width:0%"></div>
         </div>
 
         <div class="progress-text">
             <span id="soldPercent">0%</span>
+            <span id="soldDelta" class="delta">(+0)</span>
         </div>
 
     </section>
 
-
     <section class="chart-card">
 
         <h2>Sold History</h2>
-
         <canvas id="historyChart"></canvas>
 
     </section>
-
 
     <section class="category-card">
 
         <h2>Ticket Categories</h2>
 
-        <div id="categories">
-
-        </div>
+        <div id="categories"></div>
 
     </section>
 
