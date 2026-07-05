@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-05T08:14:45.774Z",
+  "updatedAt": "2026-07-05T10:28:12.352Z",
   "total": 722,
   "available": 648,
-  "holding": 2,
-  "sold": 72,
+  "holding": 0,
+  "sold": 74,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -31,14 +31,14 @@
     },
     "YOU (SVIP)": {
       "total": 119,
-      "available": 100,
+      "available": 98,
       "holding": 0,
-      "sold": 19
+      "sold": 21
     },
     "GIFT": {
       "total": 62,
-      "available": 28,
-      "holding": 2,
+      "available": 30,
+      "holding": 0,
       "sold": 32
     }
   }
