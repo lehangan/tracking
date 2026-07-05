@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-05T01:19:08.663Z",
+  "updatedAt": "2026-07-05T05:11:23.652Z",
   "total": 722,
-  "available": 654,
+  "available": 650,
   "holding": 0,
-  "sold": 68,
+  "sold": 72,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -37,9 +37,9 @@
     },
     "GIFT": {
       "total": 62,
-      "available": 34,
+      "available": 30,
       "holding": 0,
-      "sold": 28
+      "sold": 32
     }
   }
 }
