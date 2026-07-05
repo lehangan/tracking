@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-07-05T15:53:45.082Z",
+  "updatedAt": "2026-07-05T16:50:06.824Z",
   "total": 722,
-  "available": 645,
+  "available": 643,
   "holding": 0,
-  "sold": 77,
+  "sold": 79,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -25,9 +25,9 @@
     },
     "IN (VIP)": {
       "total": 215,
-      "available": 213,
+      "available": 211,
       "holding": 0,
-      "sold": 2
+      "sold": 4
     },
     "YOU (SVIP)": {
       "total": 119,
