@@ -62,13 +62,13 @@ async function crawl(eventId) {
 
                 // Holding
                 case 2:
-                case 4:
                     summary.holding++;
                     summary.categories[type].holding++;
                     break;
 
                 // Sold
                 case 3:
+                case 4:
                     summary.sold++;
                     summary.categories[type].sold++;
                     break;
