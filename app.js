@@ -1,15 +1,25 @@
 let chart = null;
 
-// lưu giá trị sold lần trước
-let previousSold = Number(localStorage.getItem("previousSold")) || 0;
+// Lấy event từ URL (?event=53)
+// Mặc định là 53 nếu không truyền
+const eventId =
+    new URLSearchParams(window.location.search).get("event") || "53";
+
+// previous sold riêng cho từng event
+let previousSold = Number(
+    localStorage.getItem(`previousSold_${eventId}`)
+) || 0;
 
 async function loadData() {
     try {
-        const latest = await fetch("./data/latest.json?_=" + Date.now())
-            .then(res => res.json());
 
-        const history = await fetch("./data/history.json?_=" + Date.now())
-            .then(res => res.json());
+        const latest = await fetch(
+            `./data/${eventId}/latest.json?_=${Date.now()}`
+        ).then(res => res.json());
+
+        const history = await fetch(
+            `./data/${eventId}/history.json?_=${Date.now()}`
+        ).then(res => res.json());
 
         updateSummary(latest);
         updateCategories(latest.categories);
@@ -22,17 +32,14 @@ async function loadData() {
 
 function updateSummary(data) {
 
-    // update time
     document.getElementById("updatedAt").textContent =
         new Date(data.updatedAt).toLocaleString();
 
-    // update numbers
     document.getElementById("total").textContent = data.total;
     document.getElementById("sold").textContent = data.sold;
     document.getElementById("holding").textContent = data.holding;
     document.getElementById("available").textContent = data.available;
 
-    // percent
     const percent = data.total
         ? (data.sold / data.total) * 100
         : 0;
@@ -43,9 +50,7 @@ function updateSummary(data) {
     document.getElementById("progress-bar").style.width =
         percent + "%";
 
-    // =========================
-    // SOLD DELTA (phần bạn cần)
-    // =========================
+    // Sold delta
     const delta = data.sold - previousSold;
 
     const deltaEl = document.getElementById("soldDelta");
@@ -61,9 +66,12 @@ function updateSummary(data) {
         deltaEl.classList.remove("negative");
     }
 
-    // update lại previousSold
     previousSold = data.sold;
-    localStorage.setItem("previousSold", previousSold);
+
+    localStorage.setItem(
+        `previousSold_${eventId}`,
+        previousSold
+    );
 }
 
 function updateCategories(categories) {
@@ -83,21 +91,26 @@ function updateCategories(categories) {
 
                 <h3>${name}</h3>
 
-                <p>Total: ${value.total}</p>
+                <div class="category-sold">
+                    Sold ${value.sold}/${value.total}
+                    (${percent.toFixed(1)}%)
+                </div>
 
                 <div class="category-progress">
-                    <div class="category-progress-bar"
-                        style="width:${percent}%"></div>
+
+                    <div
+                        class="category-progress-bar"
+                        style="width:${percent}%"
+                    ></div>
+
                 </div>
 
                 <div class="category-info">
-                    <span>Sold: ${value.sold}</span>
-                    <span>${percent.toFixed(1)}%</span>
-                </div>
 
-                <div class="category-info">
                     <span>Holding: ${value.holding}</span>
+
                     <span>Available: ${value.available}</span>
+
                 </div>
 
             </div>
@@ -107,16 +120,33 @@ function updateCategories(categories) {
 
 function updateChart(history) {
 
-    const labels = history.map(item => {
+    const sold = history.map(item => item.sold);
+
+    const labels = [];
+
+    let lastDate = "";
+
+    history.forEach(item => {
+
         const d = new Date(item.time);
 
-        return d.toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit"
+        const currentDate = d.toLocaleDateString([], {
+            day: "2-digit",
+            month: "2-digit"
         });
-    });
 
-    const sold = history.map(item => item.sold);
+        if (currentDate !== lastDate) {
+
+            labels.push(currentDate);
+            lastDate = currentDate;
+
+        } else {
+
+            labels.push("");
+
+        }
+
+    });
 
     const ctx = document
         .getElementById("historyChart")
@@ -127,47 +157,145 @@ function updateChart(history) {
     }
 
     chart = new Chart(ctx, {
+
         type: "line",
+
         data: {
+
             labels,
+
             datasets: [
+
                 {
+
                     label: "Sold",
+
                     data: sold,
+
                     borderColor: "#3b82f6",
+
                     backgroundColor: "rgba(59,130,246,.15)",
+
                     fill: true,
+
                     tension: 0.35,
-                    pointRadius: 3
+
+                    pointRadius: 3,
+
+                    pointHoverRadius: 6
+
                 }
+
             ]
+
         },
+
         options: {
+
             responsive: true,
+
             maintainAspectRatio: false,
 
+            interaction: {
+                mode: "index",
+                intersect: false
+            },
+
             plugins: {
+
                 legend: {
+
                     labels: {
                         color: "white"
                     }
+
+                },
+
+                tooltip: {
+
+                    callbacks: {
+
+                        title(context) {
+
+                            const index = context[0].dataIndex;
+
+                            return new Date(history[index].time)
+                                .toLocaleString();
+
+                        }
+
+                    }
+
                 }
+
             },
 
             scales: {
+
                 x: {
-                    ticks: { color: "#cbd5e1" },
-                    grid: { color: "#334155" }
+
+                    ticks: {
+
+                        color: "#cbd5e1",
+
+                        autoSkip: false,
+
+                        maxRotation: 0,
+
+                        minRotation: 0
+
+                    },
+
+                    grid: {
+
+                        color: "#334155"
+
+                    }
+
                 },
+
                 y: {
+
                     beginAtZero: true,
-                    ticks: { color: "#cbd5e1" },
-                    grid: { color: "#334155" }
+
+                    ticks: {
+
+                        color: "#cbd5e1"
+
+                    },
+
+                    grid: {
+
+                        color: "#334155"
+
+                    }
+
                 }
+
             }
+
         }
+
     });
+
+}
+
+// Dropdown chọn event
+const eventSelect = document.getElementById("eventSelect");
+
+if (eventSelect) {
+
+    eventSelect.value = eventId;
+
+    eventSelect.addEventListener("change", () => {
+
+        window.location.href = `?event=${eventSelect.value}`;
+
+    });
+
 }
 
 loadData();
+
+// Refresh mỗi 30 giây
 setInterval(loadData, 30000);

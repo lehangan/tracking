@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>River Flows In You Tracker</title>
+    <title>Ticket Tracker</title>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -11,76 +12,102 @@
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <header>
-        <h1>🎫 River Flows In You Tracker</h1>
+        <header>
 
-        <div class="last-update">
-            Last Update:
-            <span id="updatedAt">-</span>
-        </div>
-    </header>
+            <h1 id="eventTitle">🎫 Ticket Tracker</h1>
 
-    <section class="cards">
+            <div class="event-selector">
 
-        <div class="card">
-            <h3>Total Seats</h3>
-            <h2 id="total">0</h2>
-        </div>
+                <label for="eventSelect">Event:</label>
 
-        <div class="card sold">
-            <h3>Sold</h3>
-            <h2 id="sold">0</h2>
-        </div>
+                <select id="eventSelect">
+                    <option value="53">VCT</option>
+                    <option value="54">TC</option>
+                </select>
 
-        <div class="card hold">
-            <h3>Holding</h3>
-            <h2 id="holding">0</h2>
-        </div>
+            </div>
 
-        <div class="card available">
-            <h3>Available</h3>
-            <h2 id="available">0</h2>
-        </div>
+            <div class="last-update">
+                Last Update:
+                <span id="updatedAt">-</span>
+            </div>
 
-    </section>
+        </header>
 
-    <section class="progress-card">
+        <section class="cards">
 
-        <div class="progress-title">
-            Ticket Sold
-        </div>
+            <div class="card">
+                <h3>Total Seats</h3>
+                <h2 id="total">0</h2>
+            </div>
 
-        <div class="progress">
-            <div id="progress-bar" class="progress-bar" style="width:0%"></div>
-        </div>
+            <div class="card sold">
+                <h3>Sold</h3>
+                <h2 id="sold">0</h2>
+            </div>
 
-        <div class="progress-text">
-            <span id="soldPercent">0%</span>
-            <span id="soldDelta" class="delta">(+0)</span>
-        </div>
+            <div class="card hold">
+                <h3>Holding</h3>
+                <h2 id="holding">0</h2>
+            </div>
 
-    </section>
+            <div class="card available">
+                <h3>Available</h3>
+                <h2 id="available">0</h2>
+            </div>
 
-    <section class="chart-card">
+        </section>
 
-        <h2>Sold History</h2>
-        <canvas id="historyChart"></canvas>
+        <section class="progress-card">
 
-    </section>
+            <div class="progress-title">
+                Ticket Sold
+            </div>
 
-    <section class="category-card">
+            <div class="progress">
 
-        <h2>Ticket Categories</h2>
+                <div
+                    id="progress-bar"
+                    class="progress-bar"
+                    style="width:0%">
+                </div>
 
-        <div id="categories"></div>
+            </div>
 
-    </section>
+            <div class="progress-text">
 
-</div>
+                <span id="soldPercent">0%</span>
 
-<script src="app.js"></script>
+                <span id="soldDelta" class="delta">
+                    (+0)
+                </span>
+
+            </div>
+
+        </section>
+
+        <section class="chart-card">
+
+            <h2>Sold History</h2>
+
+            <canvas id="historyChart"></canvas>
+
+        </section>
+
+        <section class="category-card">
+
+            <h2>Ticket Categories</h2>
+
+            <div id="categories"></div>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
 
 </body>
+
 </html>

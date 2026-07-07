@@ -16,5 +16,17 @@
     "available": 673,
     "holding": 0,
     "sold": 49
+  },
+  {
+    "time": "2026-07-07T02:07:37.690Z",
+    "available": 609,
+    "holding": 0,
+    "sold": 89
+  },
+  {
+    "time": "2026-07-07T02:11:07.846Z",
+    "available": 609,
+    "holding": 24,
+    "sold": 89
   }
 ]
