@@ -1,8 +1,8 @@
 {
   "eventId": 54,
-  "updatedAt": "2026-07-07T16:09:13.380Z",
+  "updatedAt": "2026-07-07T18:16:21.644Z",
   "total": 722,
-  "available": 674,
+  "available": 676,
   "holding": 0,
   "sold": 46,
   "categories": {
@@ -38,7 +38,7 @@
     },
     "GIFT": {
       "total": 62,
-      "available": 52,
+      "available": 54,
       "holding": 0,
       "sold": 8
     }
