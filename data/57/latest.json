@@ -1,22 +1,22 @@
 {
   "eventId": 57,
-  "updatedAt": "2026-07-14T01:54:51.074Z",
+  "updatedAt": "2026-07-14T03:26:35.386Z",
   "total": 722,
-  "available": 378,
-  "holding": 0,
-  "sold": 344,
+  "available": 374,
+  "holding": 3,
+  "sold": 345,
   "categories": {
     "CHILL": {
       "total": 93,
-      "available": 15,
-      "holding": 0,
+      "available": 13,
+      "holding": 2,
       "sold": 78
     },
     "RIVER (Standard)": {
       "total": 108,
-      "available": 50,
-      "holding": 0,
-      "sold": 58
+      "available": 48,
+      "holding": 1,
+      "sold": 59
     },
     "FLOW (Pre)": {
       "total": 125,
