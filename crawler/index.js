@@ -1,7 +1,7 @@
 const crawl = require("./crawl");
 
 (async () => {
-    for (const eventId of [53, 54]) {
+    for (const eventId of [53, 54, 57]) {
         try {
             await crawl(eventId);
         } catch (err) {
