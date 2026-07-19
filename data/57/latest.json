@@ -1,8 +1,8 @@
 {
   "eventId": 57,
-  "updatedAt": "2026-07-19T10:09:01.831Z",
+  "updatedAt": "2026-07-19T11:20:26.694Z",
   "total": 722,
-  "available": 335,
+  "available": 334,
   "holding": 0,
   "sold": 387,
   "categories": {
@@ -14,7 +14,7 @@
     },
     "RIVER (Standard)": {
       "total": 108,
-      "available": 38,
+      "available": 37,
       "holding": 0,
       "sold": 70
     },
