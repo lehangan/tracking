@@ -172,5 +172,11 @@
     "available": 321,
     "holding": 0,
     "sold": 401
+  },
+  {
+    "time": "2026-07-21T10:50:29.449Z",
+    "available": 319,
+    "holding": 0,
+    "sold": 403
   }
 ]
