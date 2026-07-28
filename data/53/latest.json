@@ -1,16 +1,16 @@
 {
   "eventId": 53,
-  "updatedAt": "2026-07-28T04:20:44.286Z",
+  "updatedAt": "2026-07-28T06:44:59.392Z",
   "total": 722,
   "available": 480,
   "holding": 6,
-  "sold": 234,
+  "sold": 236,
   "categories": {
     "CHILL": {
       "total": 93,
       "available": 59,
       "holding": 2,
-      "sold": 30
+      "sold": 32
     },
     "RIVER (Standard)": {
       "total": 108,
@@ -26,14 +26,14 @@
     },
     "IN (VIP)": {
       "total": 215,
-      "available": 187,
-      "holding": 0,
+      "available": 185,
+      "holding": 2,
       "sold": 28
     },
     "YOU (SVIP)": {
       "total": 119,
-      "available": 43,
-      "holding": 3,
+      "available": 45,
+      "holding": 1,
       "sold": 73
     },
     "GIFT": {
