@@ -1,10 +1,10 @@
 {
   "eventId": 54,
-  "updatedAt": "2026-07-29T06:15:20.436Z",
+  "updatedAt": "2026-07-29T09:10:10.361Z",
   "total": 722,
-  "available": 618,
+  "available": 616,
   "holding": 0,
-  "sold": 104,
+  "sold": 106,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -38,9 +38,9 @@
     },
     "GIFT": {
       "total": 62,
-      "available": 28,
+      "available": 26,
       "holding": 0,
-      "sold": 34
+      "sold": 36
     }
   }
 }
