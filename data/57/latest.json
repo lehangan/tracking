@@ -1,10 +1,10 @@
 {
   "eventId": 57,
-  "updatedAt": "2026-08-11T15:10:20.961Z",
+  "updatedAt": "2026-08-11T16:08:54.410Z",
   "total": 722,
-  "available": 241,
+  "available": 240,
   "holding": 0,
-  "sold": 481,
+  "sold": 482,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -20,9 +20,9 @@
     },
     "FLOW (Pre)": {
       "total": 125,
-      "available": 70,
+      "available": 69,
       "holding": 0,
-      "sold": 55
+      "sold": 56
     },
     "IN (VIP)": {
       "total": 215,
