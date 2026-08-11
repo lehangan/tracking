@@ -1,14 +1,14 @@
 {
   "eventId": 53,
-  "updatedAt": "2026-08-11T14:04:41.387Z",
+  "updatedAt": "2026-08-11T15:10:19.887Z",
   "total": 722,
   "available": 278,
-  "holding": 4,
+  "holding": 2,
   "sold": 440,
   "categories": {
     "CHILL": {
       "total": 93,
-      "available": 13,
+      "available": 11,
       "holding": 0,
       "sold": 80
     },
@@ -32,8 +32,8 @@
     },
     "YOU (SVIP)": {
       "total": 119,
-      "available": 19,
-      "holding": 2,
+      "available": 21,
+      "holding": 0,
       "sold": 98
     },
     "GIFT": {
