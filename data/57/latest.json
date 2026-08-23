@@ -1,8 +1,8 @@
 {
   "eventId": 57,
-  "updatedAt": "2026-08-23T14:32:22.073Z",
+  "updatedAt": "2026-08-23T14:52:39.880Z",
   "total": 722,
-  "available": 209,
+  "available": 207,
   "holding": 0,
   "sold": 513,
   "categories": {
@@ -26,7 +26,7 @@
     },
     "IN (VIP)": {
       "total": 215,
-      "available": 106,
+      "available": 104,
       "holding": 0,
       "sold": 109
     },
