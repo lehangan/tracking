@@ -1,8 +1,8 @@
 {
   "eventId": 54,
-  "updatedAt": "2026-08-26T10:03:30.375Z",
+  "updatedAt": "2026-08-26T10:44:30.259Z",
   "total": 722,
-  "available": 369,
+  "available": 371,
   "holding": 0,
   "sold": 351,
   "categories": {
@@ -32,7 +32,7 @@
     },
     "YOU (SVIP)": {
       "total": 119,
-      "available": 56,
+      "available": 58,
       "holding": 0,
       "sold": 61
     },
