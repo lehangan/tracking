@@ -1,10 +1,10 @@
 {
   "eventId": 54,
-  "updatedAt": "2026-09-03T00:45:48.006Z",
+  "updatedAt": "2026-09-03T05:08:33.369Z",
   "total": 722,
-  "available": 266,
+  "available": 258,
   "holding": 4,
-  "sold": 452,
+  "sold": 460,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -26,9 +26,9 @@
     },
     "IN (VIP)": {
       "total": 215,
-      "available": 140,
+      "available": 132,
       "holding": 2,
-      "sold": 73
+      "sold": 81
     },
     "YOU (SVIP)": {
       "total": 119,
