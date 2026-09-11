@@ -1,10 +1,10 @@
 {
   "eventId": 57,
-  "updatedAt": "2026-09-11T09:54:00.229Z",
+  "updatedAt": "2026-09-11T13:54:03.306Z",
   "total": 722,
-  "available": 102,
+  "available": 101,
   "holding": 2,
-  "sold": 616,
+  "sold": 619,
   "categories": {
     "CHILL": {
       "total": 93,
@@ -20,21 +20,21 @@
     },
     "FLOW (Pre)": {
       "total": 125,
-      "available": 30,
+      "available": 29,
       "holding": 0,
-      "sold": 94
+      "sold": 96
     },
     "IN (VIP)": {
       "total": 215,
-      "available": 62,
+      "available": 63,
       "holding": 2,
       "sold": 150
     },
     "YOU (SVIP)": {
       "total": 119,
-      "available": 10,
+      "available": 9,
       "holding": 0,
-      "sold": 109
+      "sold": 110
     },
     "GIFT": {
       "total": 62,
